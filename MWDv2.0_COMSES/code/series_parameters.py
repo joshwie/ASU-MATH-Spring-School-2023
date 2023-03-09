@@ -9,10 +9,10 @@
 #
 # used to specify all parameter values, called by main.py
 # 2 of 7
+import datetime
+
 
 def series_params():
-    series_name = 'Bimodal_dist_alpha_1000ts'
-    directory = './results/'
 
     # series variables
     seed = None
@@ -51,5 +51,14 @@ def series_params():
     
     for i in range(n_sets * reps):
         (expanded_sets[i]).insert(0, run_list[i])
+
+    modus = 'Bimodal'
+
+    series_name = modus
+    series_name += "_" + str(t_max) + "ts_" + str(reps) + "reps"
+    ct = datetime.datetime.now().replace(microsecond=0)
+    series_name += "_" + str(ct)
+
+    directory = './results/'
 
     return directory, series_name, seed, reps, n_sets, expanded_sets
