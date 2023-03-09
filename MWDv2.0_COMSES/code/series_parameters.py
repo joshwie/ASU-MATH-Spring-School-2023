@@ -11,16 +11,16 @@
 # 2 of 7
 
 def series_params():
-    series_name = 'Mar4_SN300_r500_mu1_n20000_w10_p1'
+    series_name = 'Bimodal_dist_alpha_1000ts'
     directory = './results/'
 
     # series variables
     seed = None
-    t_max = 3000 #number of simulation steps
+    t_max = 1000 #number of simulation steps
     reps = 500 #repetitions of each parameter set
 
     # simulation variables
-    n_list = [20000] #number of households
+    n_list = [100] #number of households
     omega_0_list = [10] #inital wage
     p_0_list = [1] #intial price
     H_max = 400 #max household hours per month

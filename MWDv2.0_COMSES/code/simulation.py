@@ -55,7 +55,7 @@ def simulation(s, r, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0, rng):
     # or with the stopping condition that S_S is within 1 unit of S_D.
 
     # conditional steps
-    while (abs(S_D - S_S and t < t_max) >= 1):
+    while abs(S_D - S_S)>= 1 and t < t_max:
         t = t + 1
 
     # t_max simulation steps
