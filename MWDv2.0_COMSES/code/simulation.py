@@ -39,15 +39,15 @@ def simulation(s, r, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0, rng):
 
     #save initial results
     #macro results
-    step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
-                    I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
-                    np.sum(H_N), np.sum(H_O), np.sum(m), np.median(m), np.mean(m), np.max(m), np.min(m)]
+    #step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
+    #                I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
+    #                np.sum(H_N), np.sum(H_O), np.sum(m), np.median(m), np.mean(m), np.max(m), np.min(m)]
 
     #micro results
-    # step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
-    #                 I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
-    #                 households, alpha, beta, H_N.copy(), H_O.copy(), H.copy(), H_W.copy(), m.copy(), S.copy(),
-    #                 S_C.copy(), income.copy(), U.copy(), expenditure.copy()]
+    step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
+                     I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
+                     households, alpha, beta, H_N.copy(), H_O.copy(), H.copy(), H_W.copy(), m.copy(), S.copy(),
+                     S_C.copy(), income.copy(), U.copy(), expenditure.copy()]
 
     sim_results.append(step_results)
 
@@ -108,14 +108,14 @@ def simulation(s, r, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0, rng):
 
         #write step state to frame
         #macro results
-        step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
-                        I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
-                        np.sum(H_N), np.sum(H_O), np.sum(m), np.median(m), np.mean(m), np.max(m), np.min(m)]
+        #step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
+        #                I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
+        #                np.sum(H_N), np.sum(H_O), np.sum(m), np.median(m), np.mean(m), np.max(m), np.min(m)]
         #micro results
-        # step_results = [s, r, t, t_max, n, omega_max, H_max, A, gamma, mu, S_N, omega_0, p_0,
-        #                 I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
-        #                 households, alpha, beta, H_N.copy(), H_O.copy(), H.copy(), H_W.copy(), m.copy(), S.copy(),
-        #                 S_C.copy(), income.copy(), U.copy(), expenditure.copy()]
+        step_results = [s, r, t, t_max, n, H_max, A, gamma, mu, S_N, omega_0, p_0,
+                         I, pi, total_pi, omega, p, H_D, S_S, S_P, S_hat, N, H_S, H_M, S_D, S_M,
+                         households, alpha, beta, H_N.copy(), H_O.copy(), H.copy(), H_W.copy(), m.copy(), S.copy(),
+                         S_C.copy(), income.copy(), U.copy(), expenditure.copy()]
         
         sim_results.append(step_results)
 

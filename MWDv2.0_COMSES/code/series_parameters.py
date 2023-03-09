@@ -17,7 +17,7 @@ def series_params():
     # series variables
     seed = None
     t_max = 1000 #number of simulation steps
-    reps = 500 #repetitions of each parameter set
+    reps = 1 #repetitions of each parameter set
 
     # simulation variables
     n_list = [100] #number of households
@@ -52,7 +52,7 @@ def series_params():
     for i in range(n_sets * reps):
         (expanded_sets[i]).insert(0, run_list[i])
 
-    modus = 'Bimodal'
+    modus = 'Bimodal_micro'
 
     series_name = modus
     series_name += "_" + str(t_max) + "ts_" + str(reps) + "reps"
