@@ -1,0 +1,7 @@
+#This model requires:
+python 3.8
+#with
+pandas==1.4.1
+numpy==1.22.3
+
+#The model writes results to a directory, currently identified as './results/' in #series_parameters.py, so this directory should be created or the code in series_parameters.py should #be altered with the correct results directory path. 
