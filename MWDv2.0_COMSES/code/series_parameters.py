@@ -52,7 +52,7 @@ def series_params():
     for i in range(n_sets * reps):
         (expanded_sets[i]).insert(0, run_list[i])
 
-    modus = 'Bimodal_micro'
+    modus = 'Normal_micro'
 
     series_name = modus
     series_name += "_" + str(t_max) + "ts_" + str(reps) + "reps"

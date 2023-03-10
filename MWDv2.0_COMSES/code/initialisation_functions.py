@@ -25,9 +25,14 @@ def create_firm(omega_0, p_0):
 
 def create_households(n, H_max, rng):
     #alpha = rng.uniform(0, 1, n)
+    
     #Bimodal distribution (workaholic households and relax households)
-    alpha = np.concatenate([rng.normal(0.3, 0.05, int(0.5*n)), rng.normal(0.7, 0.05, int(0.5*n))])
+    #alpha = np.concatenate([rng.normal(0.3, 0.05, int(0.5*n)), rng.normal(0.7, 0.05, int(0.5*n))])
     #print(alpha)
+
+    #NORMAL DISTRIBUTION 
+    alpha = rng.normal(0.5,0.2, n)#
+
     beta = 1 - alpha
     H_N = np.zeros(n)
     H_O = np.zeros(n)
