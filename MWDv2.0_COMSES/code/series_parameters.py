@@ -17,7 +17,7 @@ def series_params():
     # series variables
     seed = None
     t_max = 1000 #number of simulation steps
-    reps = 1 #repetitions of each parameter set
+    reps = 300 #repetitions of each parameter set
 
     # simulation variables
     n_list = [100] #number of households
@@ -26,8 +26,8 @@ def series_params():
     H_max = 400 #max household hours per month
 
     # firm parameters
-    A_list = [3] #firm production function coefficient
-    gamma_list = [1.2] #firm production function exponent
+    A_list = [1, 3, 5]#[3] #firm production function coefficient
+    gamma_list = [0.5, 1.2, 2]#[1.2] #firm production function exponent
     mu_list = [10] #memory for firm expectation updates
 
     #base consumption requirement
@@ -52,7 +52,7 @@ def series_params():
     for i in range(n_sets * reps):
         (expanded_sets[i]).insert(0, run_list[i])
 
-    modus = 'Normal_micro'
+    modus = 'Sensitivity_A_Y'
 
     series_name = modus
     series_name += "_" + str(t_max) + "ts_" + str(reps) + "reps"
